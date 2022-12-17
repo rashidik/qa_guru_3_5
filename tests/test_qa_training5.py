@@ -5,6 +5,7 @@ from selene import be, have
 
 
 def test_fill_form(open_browser):
+    browser.open('/automation-practice-form')
     browser.element('[id="firstName"]').should(be.blank).type('Гурбангулы')
     browser.element('[id="lastName"]').should(be.blank).type('Бердымухамедов')
     browser.element('[id="userEmail"]').should(be.blank).type('mail@mail.com')
