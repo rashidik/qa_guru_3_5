@@ -25,15 +25,13 @@ def test_fill_form(open_browser):
     browser.element("#city").click()
     browser.element("#react-select-4-input").type('Agra').press_enter()
     browser.element('[type="submit"]').click()
-    browser.element('.table').should(have.text(
-         'Гурбангулы Бердымухамедов' and
-         'mail@mail.com' and
-         'Female' and
-         '1234567890' and
-         '07 July,1956' and
-         'Maths' and
-         'Reading' and
-         'img.png' and
-         'Троллоло стрит' and
-         'Uttar Pradesh Agra'
-        ))
+    browser.element('.table-responsive').should(have.text('Гурбангулы Бердымухамедов'))
+    browser.element('.table-responsive').should(have.text('mail@mail.com'))
+    browser.element('.table-responsive').should(have.text('Female'))
+    browser.element('.table-responsive').should(have.text('1234567890'))
+    browser.element('.table-responsive').should(have.text('07 July,1956'))
+    browser.element('.table-responsive').should(have.text('img.png'))
+    browser.element('.table-responsive').should(have.text('Троллоло стрит'))
+    browser.element('.table-responsive').should(have.text('Uttar Pradesh Agra'))
+
+
